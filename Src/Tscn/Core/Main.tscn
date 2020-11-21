@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Decrypt" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_bottom = 70
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Decrypt"]
+margin_right = 700.0
+margin_bottom = 380.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 8
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProfilePicture" type="TextureRect" parent="Decrypt/VBoxContainer"]
+margin_left = 310.0
+margin_top = 108.0
+margin_right = 390.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 80, 80 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Password" type="LineEdit" parent="Decrypt/VBoxContainer"]
+margin_left = 238.0
+margin_top = 195.0
+margin_right = 462.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 224, 28 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_length = 128
+secret = true
+caret_blink = true
+
+[node name="Login" type="Button" parent="Decrypt/VBoxContainer"]
+margin_left = 238.0
+margin_top = 232.0
+margin_right = 462.0
+margin_bottom = 272.0
+rect_min_size = Vector2( 224, 40 )
+size_flags_horizontal = 4
+text = "Decrypt"
+
+[node name="Create" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Create"]
+margin_top = 419.0
+margin_right = 700.0
+margin_bottom = 434.0
+size_flags_vertical = 10
+bbcode_enabled = true
+bbcode_text = "[center]Create new manager[/center]"
+text = "Create new manager"
+fit_content_height = true
